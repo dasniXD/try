@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Splide Try</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="splide/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.0/dist/css/splide.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <h1>We're Bolden. Creators of brand strategy & identity, UX/UI & visual design.</h1>
+</head>
+<body>
+    <h2>Meet The Team</h2>
+    <br>
+    <div class="splide is-team">
+        <div class="splide__track is-team">
+            <ul class="splide__list is-team">
+                <li class="splide__slide is-team"><img src="image/apptizer.jpg" height="100px"></li>
+                <li class="splide__slide is-team"><img src="image/chicken.jpg" height="100px"></li>
+                <li class="splide__slide is-team"><img src="image/cookies.jpg" height="100px"></li>
+                <li class="splide__slide is-team"><img src="image/fried.jpg" height="100px"></li>
+                <li class="splide__slide is-team"><img src="image/panner.jpg" height="100px"></li>
+                <li class="splide__slide is-team"><img src="image/salad.jpg" height="100px"></li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.0/dist/js/splide.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let splides = document.querySelectorAll('.splide.is-team');
+            for (let i = 0, splideLength = splides.length; i < splideLength; i++) {
+                new Splide(splides[i], {
+                    type: "loop",
+                    gap: "1rem",
+                    drag: true,
+                    pagination: false,
+                    autowidth: true,
+                    perPage: 3,
+                    arrows: false,
+                    autoplay: true,
+                    interval: 900,
+                    pauseOnHover: true,
+                    rewind: false,
+                    resetProgress: false,
+                    autoScroll: {
+                      speed: 1,
+                    } 
+                }).mount();
+            }
+        });
+    </script>
+</body>
+</html>
